@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script>
+	let listaLinguagens = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python' ];
+    let numeroDeElementos = parseInt(prompt('insira o numero de elementos que você vai adicionar'));
+    
+    function AddMaisElementos() {
+    listaLinguagens.push(prompt('insira uma linguagem de programação'));
+   } 
+   
+  while (listaLinguagens.length <= 4 + numeroDeElementos) {
+    AddMaisElementos();    
+  
+    console.log(listaLinguagens);    
+  }
+document.write(listaLinguagens);
+
+</script>

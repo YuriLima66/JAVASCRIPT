@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    pulaLinha();
+    document.write("<big>"+frase+"</big>");
+    pulaLinha();
+}
+function calculaImc(peso, altura){
+    return peso/ (altura * altura);
+}
+var nome = prompt("Informe seu nome.");
+var peso = prompt("Informe seu peso.");
+var altura = prompt("Informe sua altura.");
+var imc = peso /(altura * altura);
+
+
+mostra (nome + ", o seu IMC é " + imc)
+
+if (imc < 18){
+    mostra ("<br>Entre 17 e 18,49   Abaixo do peso");
+}
+if (imc < 25 ){
+    mostra ("Entre 18,5 e 24,99 Peso normal");
+}
+if (imc >=25 &&  imc <= 29.99){
+    mostra ("Entre 25 e 29,99    Acima do peso");
+}
+
+if (imc >= 30 &&  imc <= 34.99){
+    mostra ("Entre 30 e 34,99    Obesidade I");
+}
+
+if (imc > 35 &&  imc <= 39.99){
+    mostra ("Entre 35 e 39,99    Obesidade II (severa)");
+}
+
+if (imc > 39.99){
+    mostra ("Maior que 39,99    Obesidade III (Grave) Recomenda-se procurar um médico.");
+}
+mostra("FIM")
+</script>

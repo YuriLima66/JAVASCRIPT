@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var ano = 2023;
+    var idadeFlavio = (ano-1977);
+    var idadeJoaquin = (ano-1996);
+    var idadeBarney = (ano-1976);
+    var mediaIdade = (idadeFlavio + idadeBarney + idadeJoaquin)/3;
+    
+    function pulaLinha(){
+    	document.write("<br><br>");
+    }
+    function mostra(texto){
+    	document.write(texto);
+    	pulaLinha();
+    }
+
+    mostra("Flávio tem " + (ano - 1977) + " anos.");
+    mostra("Joaquim tem " + (ano - 1996) + " anos.");
+    mostra("Barney tem " + (ano - 1976) + " anos.");
+   	mostra("A média das idades é "+mediaIdade+" anos.");
+
+
+   
+
+</script>
