@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1 class="" id="" name="titulo_principal">DOM(Document Object Model)</h1>
+        <p>
+            <strong>Modelo de Objetos para Documentos"D.O.M"</strong> é uma <ins><em>interface de programação para
+                    documentos</em></ins> HTML e XML. Ele respresenta a estrutura de um documento em formato de arvore,
+            permitindo q os devs acessem e manipulem os elementos de uma pagina da web de forma dinamica. Em JavaScript,
+            o DOM é usado para interagir com os elementos de uma pagina web, como alterar no texto de um paragrafo ou
+            add um novo elemento a pagina.
+        </p>
+
+        <button id="noite" onclick="noite()" >night</button>
+    </main>
+
+    <script>
+
+        var fundo = document.body
+
+        var teste = window.document.getElementsByName('titulo_principal')[0]
+        teste.style.color = 'rgb(250,128,114)'
+        document.write('No H1 está escrito:' + teste.innerHTML)
+
+
+        function noite() {
+            const fundo=document.body
+            fundo.style.backgroundColor = ("black")
+            fundo.style.color = ("white")            
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
