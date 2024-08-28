@@ -1,13 +1,255 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exercicio 001</title>
+    <title>Exercícios JavaScript</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>exerciio 001</h1>
-    <script src="./js/script.js" defer></script>
-    
+
+    <h1>Exercícios JavaScript</h1>
+
+    <h2>1. Nome Completo e Preferência por Programar</h2>
+    <button onclick="executarExercicio1()">Executar</button>
+    <pre id="resultado1"></pre>
+
+    <h2>2. Operações Matemáticas</h2>
+    <button onclick="executarExercicio2()">Executar</button>
+    <pre id="resultado2"></pre>
+
+    <h2>3. Poema com Interpolação</h2>
+    <button onclick="executarExercicio3()">Executar</button>
+    <pre id="resultado3"></pre>
+
+    <h2>4. Data Atual Formatada</h2>
+    <button onclick="executarExercicio4()">Executar</button>
+    <pre id="resultado4"></pre>
+
+    <h2>5. Área do Retângulo</h2>
+    <button onclick="executarExercicio5()">Executar</button>
+    <pre id="resultado5"></pre>
+
+    <h2>6. Verificar Vogal</h2>
+    <button onclick="executarExercicio6()">Executar</button>
+    <pre id="resultado6"></pre>
+
+    <h2>7. Verificar Par ou Ímpar</h2>
+    <button onclick="executarExercicio7()">Executar</button>
+    <pre id="resultado7"></pre>
+
+    <h2>8. Classificar Triângulos</h2>
+    <button onclick="executarExercicio8()">Executar</button>
+    <pre id="resultado8"></pre>
+
+    <h2>9. Média do Aluno</h2>
+    <button onclick="executarExercicio9()">Executar</button>
+    <pre id="resultado9"></pre>
+
+    <h2>10. Array de Hobbies</h2>
+    <button onclick="executarExercicio10()">Executar</button>
+    <pre id="resultado10"></pre>
+
+    <h2>11. Array de Frutas</h2>
+    <button onclick="executarExercicio11()">Executar</button>
+    <pre id="resultado11"></pre>
+
+    <h2>12. Tipo de Variável</h2>
+    <button onclick="executarExercicio12()">Executar</button>
+    <pre id="resultado12"></pre>
+
+    <h2>13. Calculadora Simples</h2>
+    <button onclick="executarExercicio13()">Executar</button>
+    <pre id="resultado13"></pre>
+
+    <script>
+        // 1. Nome Completo e Preferência por Programar
+        function executarExercicio1() {
+            const nomeCompleto = prompt("Digite seu nome completo"); // Solicita o nome completo do usuário
+            const gostaDeProgramar = confirm("Você gosta de programar?"); // Solicita a preferência por programar
+            document.getElementById("resultado1").textContent = `${nomeCompleto}, bem vindo(a) ao nosso exercício.\nVocê gosta de programar? ${gostaDeProgramar}`; // Exibe o resultado na tag "pre" com o ID "resultado1"
+        }
+
+        // 2. Operações Matemáticas
+        function executarExercicio2() {
+            // 2 + (3 x 4) - 5
+            const num1 = 2; 
+            const num2 = 3;
+            const num3 = 4;
+            const num4 = 5;
+            const resultado1 = num1 + (num2 * num3) - num4; // Calcula a primeira operação
+
+            // 2 x (3 + 4) - 5 ÷ 5
+            const num5 = 2;
+            const num6 = 3;
+            const num7 = 4;
+            const num8 = 5;
+            const resultado2 = num5 * (num6 + num7) - num8 / num8; // Calcula a segunda operação
+
+            // {[(10 - 4) / 2] * 3} + 1
+            const num9 = 10;
+            const num10 = 4;
+            const num11 = 2;
+            const num12 = 3;
+            const num13 = 1;
+            const resultado3 = ((num9 - num10) / num11) * num12 + num13; // Calcula a terceira operação
+
+            // 3 * 4 / 2 + 1 - 5
+            const num14 = 3;
+            const num15 = 4;
+            const num16 = 2;
+            const num17 = 1;
+            const num18 = 5;
+            const resultado4 = num14 * num15 / num16 + num17 - num18; // Calcula a quarta operação
+
+            document.getElementById("resultado2").textContent = `Resultado 1: ${resultado1}\nResultado 2: ${resultado2}\nResultado 3: ${resultado3}\nResultado 4: ${resultado4}`; // Exibe os resultados na tag "pre" com o ID "resultado2"
+        }
+
+        // 3. Poema com Interpolação
+        function executarExercicio3() {
+            const nome = "Jamelão"; // Define o nome para o poema
+            const cidade = "Rio de Janeiro"; // Define a cidade para o poema
+            const poema = `Olá, ${nome}, da cidade do ${cidade},\nO sol te aquece, a brisa te leva,\nEm versos que cantam, a vida se alegra.`; // Cria o poema usando interpolação
+            document.getElementById("resultado3").textContent = poema; // Exibe o poema na tag "pre" com o ID "resultado3"
+        }
+
+        // 4. Data Atual Formatada
+        function executarExercicio4() {
+            const dataAtual = new Date(); // Cria um objeto Date com a data atual
+            const dia = dataAtual.getDate(); // Obtém o dia da data atual
+            const mes = dataAtual.getMonth() + 1; // Obtém o mês (lembrando que o índice do mês começa em 0)
+            const ano = dataAtual.getFullYear(); // Obtém o ano da data atual
+            const dataFormatada = `A data de hoje é: ${dia}/${mes}/${ano}`; // Formata a data como dia/mês/ano
+            document.getElementById("resultado4").textContent = dataFormatada; // Exibe a data formatada na tag "pre" com o ID "resultado4"
+        }
+
+        // 5. Área do Retângulo
+        function executarExercicio5() {
+            const base = parseFloat(prompt("Digite a base do retângulo:")); // Solicita a base do retângulo ao usuário
+            const altura = parseFloat(prompt("Digite a altura do retângulo:")); // Solicita a altura do retângulo ao usuário
+            const area = base * altura; // Calcula a área do retângulo
+            document.getElementById("resultado5").textContent = `A área do retângulo é: ${area}`; // Exibe a área na tag "pre" com o ID "resultado5"
+        }
+
+        // 6. Verificar Vogal
+        function executarExercicio6() {
+            const caractere = prompt("Digite um caractere:").toLowerCase(); // Solicita um caractere ao usuário e converte para minúsculo
+            if (caractere === 'a' || caractere === 'e' || caractere === 'i' || caractere === 'o' || caractere === 'u') { // Verifica se o caractere é uma vogal
+                document.getElementById("resultado6").textContent = "O caractere é uma vogal."; // Exibe a mensagem na tag "pre" com o ID "resultado6"
+            } else {
+                document.getElementById("resultado6").textContent = "O caractere não é uma vogal."; // Exibe a mensagem na tag "pre" com o ID "resultado6"
+            }
+        }
+
+        // 7. Verificar Par ou Ímpar
+        function executarExercicio7() {
+            const numero = parseInt(prompt("Digite um número:")); // Solicita um número ao usuário e converte para inteiro
+            if (numero % 2 === 0) { // Verifica se o número é par (resto da divisão por 2 é 0)
+                document.getElementById("resultado7").textContent = "O número é par."; // Exibe a mensagem na tag "pre" com o ID "resultado7"
+            } else {
+                document.getElementById("resultado7").textContent = "O número é ímpar."; // Exibe a mensagem na tag "pre" com o ID "resultado7"
+            }
+        }
+
+        // 8. Classificar Triângulos
+        function executarExercicio8() {
+            const lado1 = parseFloat(prompt("Digite o lado 1 do triângulo:")); // Solicita o lado 1 do triângulo
+            const lado2 = parseFloat(prompt("Digite o lado 2 do triângulo:")); // Solicita o lado 2 do triângulo
+            const lado3 = parseFloat(prompt("Digite o lado 3 do triângulo:")); // Solicita o lado 3 do triângulo
+            if (lado1 === lado2 && lado2 === lado3) { // Verifica se o triângulo é equilátero
+                document.getElementById("resultado8").textContent = "O triângulo é equilátero."; // Exibe a mensagem na tag "pre" com o ID "resultado8"
+            } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) { // Verifica se o triângulo é isósceles
+                document.getElementById("resultado8").textContent = "O triângulo é isósceles."; // Exibe a mensagem na tag "pre" com o ID "resultado8"
+            } else {
+                document.getElementById("resultado8").textContent = "O triângulo é escaleno."; // Exibe a mensagem na tag "pre" com o ID "resultado8"
+            }
+        }
+
+        // 9. Média do Aluno
+        function executarExercicio9() {
+            const nota1 = parseFloat(prompt("Digite a primeira nota:")); // Solicita a primeira nota
+            const nota2 = parseFloat(prompt("Digite a segunda nota:")); // Solicita a segunda nota
+            const nota3 = parseFloat(prompt("Digite a terceira nota:")); // Solicita a terceira nota
+            const media = (nota1 + nota2 + nota3) / 3; // Calcula a média das notas
+            if (media >= 7) { // Verifica se a média é maior ou igual a 7
+                document.getElementById("resultado9").textContent = `O aluno foi aprovado com média: ${media}`; // Exibe a mensagem na tag "pre" com o ID "resultado9"
+            } else {
+                document.getElementById("resultado9").textContent = `O aluno foi reprovado com média: ${media}`; // Exibe a mensagem na tag "pre" com o ID "resultado9"
+            }
+        }
+
+        // 10. Array de Hobbies
+        function executarExercicio10() {
+            const hobbies = ["Jogar video game", "Ler", "Caminhar", "Assistir filmes", "Cozinhar"]; // Define um array com hobbies
+            document.getElementById("resultado10").textContent = `Meus hobbies: ${hobbies}`; // Exibe os hobbies na tag "pre" com o ID "resultado10"
+        }
+
+        // 11. Array de Frutas
+        function executarExercicio11() {
+            const frutas = ["Maçã", "Banana", "Uva", "Pera", "Laranja"]; // Define um array com frutas
+            document.getElementById("resultado11").textContent = `Segundo elemento: ${frutas[1]}\nArray de frutas atualizado: ${frutas.push("Morango", "Abacaxi"), frutas.shift(), frutas}`; // Exibe o segundo elemento e o array atualizado na tag "pre" com o ID "resultado11"
+        }
+
+        // 12. Tipo de Variável
+        function executarExercicio12() {
+            const minhaVariavel = "Olá, mundo!"; // Define uma variável com uma string
+            const tipo = typeof minhaVariavel; // Obtém o tipo da variável
+            document.getElementById("resultado12").textContent = `Tipo da variável: ${tipo}`; // Exibe o tipo da variável na tag "pre" com o ID "resultado12"
+        }
+
+        // 13. Calculadora Simples
+        function executarExercicio13() {
+            const num1 = parseFloat(prompt("Digite o primeiro número:")); // Solicita o primeiro número
+            const num2 = parseFloat(prompt("Digite o segundo número:")); // Solicita o segundo número
+            const operador = prompt("Digite o operador (+, -, *, /):"); // Solicita o operador
+            let resultado; // Declara a variável resultado
+
+            switch (operador) { // Utiliza o switch para executar a operação correta
+                case "+": // Se o operador for "+"
+                    resultado = num1 + num2; // Soma os números
+                    break; // Sai do switch
+                case "-": // Se o operador for "-"
+                    resultado = num1 - num2; // Subtrai os números
+                    break; // Sai do switch
+                case "*": // Se o operador for "*"
+                    resultado = num1 * num2; // Multiplica os números
+                    break; // Sai do switch
+                case "/": // Se o operador for "/"
+                    if (num2 === 0) { // Verifica se o segundo número é 0 (divisão por zero)
+                        document.getElementById("resultado13").textContent = "Erro: Divisão por zero não é permitida."; // Exibe mensagem de erro na tag "pre" com o ID "resultado13"
+                    } else {
+                        resultado = num1 / num2; // Divide os números
+                    }
+                    break; // Sai do switch
+                default: // Se o operador for inválido
+                    document.getElementById("resultado13").textContent = "Operador inválido."; // Exibe mensagem de erro na tag "pre" com o ID "resultado13"
+            }
+            if (resultado !== undefined) { // Se o resultado foi calculado
+                document.getElementById("resultado13").textContent = `Resultado: ${resultado}`; // Exibe o resultado na tag "pre" com o ID "resultado13"
+            }
+        }
+    </script>
+
 </body>
 </html>
