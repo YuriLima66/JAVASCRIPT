@@ -6,7 +6,33 @@ console.log(req.url, req.method);
  
 res.setHeader('Tipo-Conteudo', 'texto/html');
 
-fs.readFile('./views/index.html', (err, data) =>{
+let caminho= './views/';
+
+switch (req.url) {
+    case '/':
+        caminho +='index.html';
+        res.statusCode=200;
+        
+        break;
+    case '/sobre':
+        caminho +='sobre.html';
+        res.statusCode=200;
+        
+        break;
+    case '/nossahistoria':
+        
+        res.statusCode=301;
+        res.setHeader('Location','/sobre')
+        
+        break;
+
+    default:
+        caminho += '404.html';
+        res.statusCode=404;
+        break;
+}
+
+fs.readFile(caminho, (err, data) =>{
     if(err){
         console.log(err);
         res.end();
