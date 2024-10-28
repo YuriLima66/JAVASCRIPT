@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soft Skills</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Soft Skills</h1>
+
+    <h2>Comunicação</h2> 
+    <p id="descricaoComunicacao" class="descricao"> 
+        Habilidade de transmitir e receber informações de forma clara e eficaz, 
+        tanto verbalmente quanto por escrito. Inclui a capacidade de ouvir ativamente,
+        expressar ideias de forma concisa e adaptar a comunicação ao público.
+    </p>
+
+    <h2>Gerenciamento de Tempo</h2>
+    <p id="descricaoTempo" class="descricao">
+        Capacidade de planejar, organizar e priorizar tarefas para otimizar o uso do tempo
+        e cumprir prazos. Inclui a capacidade de definir metas, delegar tarefas e evitar 
+        distrações.
+    </p>
+
+    <h2>Abertura para Feedback</h2>
+    <p id="descricaoFeedback" class="descricao">
+        Disposição para receber e processar críticas construtivas de forma positiva,
+        utilizando-as para o desenvolvimento pessoal e profissional. Inclui a capacidade
+        de reconhecer pontos fracos, buscar feedback ativamente e implementar mudanças
+        com base nas sugestões recebidas.
+    </p>
+
+    <script>
+        // Seleciona os elementos das descrições pelo ID
+        const comunicacao = document.getElementById('descricaoComunicacao');
+        const tempo = document.getElementById('descricaoTempo');
+        const feedback = document.getElementById('descricaoFeedback');
+
+        // Adiciona evento para mostrar a descrição de "Comunicação" ao passar o mouse
+        comunicacao.parentElement.addEventListener('mouseover', () => {
+            comunicacao.style.display = 'block'; 
+        });
+
+        // Adiciona evento para mostrar a descrição de "Gerenciamento de Tempo" ao passar o mouse
+        tempo.parentElement.addEventListener('mouseover', () => {
+            tempo.style.display = 'block';
+        });
+
+        // Adiciona evento para mostrar a descrição de "Abertura para Feedback" ao passar o mouse
+        feedback.parentElement.addEventListener('mouseover', () => {
+            feedback.style.display = 'block';
+        });
+
+        // Adiciona evento para esconder todas as descrições ao tirar o mouse de qualquer uma delas
+        comunicacao.parentElement.addEventListener('mouseout', () => {
+            comunicacao.style.display = 'none';
+            tempo.style.display = 'none';
+            feedback.style.display = 'none';
+        });
+
+        tempo.parentElement.addEventListener('mouseout', () => {
+            comunicacao.style.display = 'none';
+            tempo.style.display = 'none';
+            feedback.style.display = 'none';
+        });
+
+        feedback.parentElement.addEventListener('mouseout', () => {
+            comunicacao.style.display = 'none';
+            tempo.style.display = 'none';
+            feedback.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

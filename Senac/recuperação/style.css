@@ -1,0 +1,42 @@
+/* Estilos gerais */
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/* Estilos do Semáforo */
+#semaforo {
+    width: 100px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.luz {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+#vermelho {
+    background-color: red;
+}
+
+#amarelo {
+    background-color: yellow;
+}
+
+#verde {
+    background-color: green;
+}
+
+
+/* Estilos das Soft Skills */
+.descricao {
+    display: none;
+    margin: 10px;
+}

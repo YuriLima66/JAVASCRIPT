@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="stylecalculadora.css">
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="text" id="display" readonly>
+    <div class="botoes">
+        <button onclick="apertarNumero('7')">7</button>
+        <button onclick="apertarNumero('8')">8</button>
+        <button onclick="apertarNumero('9')">9</button>
+        <button onclick="definirOperacao('+')">+</button>
+        <button onclick="apertarNumero('4')">4</button>
+        <button onclick="apertarNumero('5')">5</button>
+        <button onclick="apertarNumero('6')">6</button>
+        <button onclick="definirOperacao('-')">-</button>
+        <button onclick="apertarNumero('1')">1</button>
+        <button onclick="apertarNumero('2')">2</button>
+        <button onclick="apertarNumero('3')">3</button>
+        <button onclick="definirOperacao('*')">*</button>
+        <button onclick="apertarNumero('0')">0</button>
+        <button onclick="apertarNumero('.')">.</button>
+        <button onclick="calcular()">=</button>
+        <button onclick="definirOperacao('/')">/</button>
+        <button onclick="limpar()">C</button>
+    </div>
+    <script src="calculadora.js" defer></script> 
+</body>
+</html>
