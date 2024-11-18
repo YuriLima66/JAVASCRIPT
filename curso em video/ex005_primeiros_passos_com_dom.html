@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 207);
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18pt;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai um resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique aqui</div>
+    <script>
+        const corpo = window.document.body;
+        const titulo = window.document.querySelector('h1');
+        const paragrafo = window.document.querySelector('p');
+        // const div = window.document.getElementById('msg')
+        // Via querySelector
+        const div = window.document.querySelector('div#msg')
+        
+        // div.style.background= 'black'
+        // div.style.width= '300px'
+        // div.style.height= '50px'
+        // div.innerText='Manipulado com DOM'
+        
+        div.style.background= 'black'
+        div.style.cursor= 'pointer'
+        div.style.width= '300px'
+        div.style.height= 'auto'
+        div.style.margin= '40px auto'
+        div.style.textAlign= 'center'
+        div.innerText='Manipulado com querySelector'
+
+        
+
+
+    </script>
+</body>
+
+</html>
