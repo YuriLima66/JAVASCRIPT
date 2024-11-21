@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio condicionais</title>
+</head>
+
+<body>
+    <h1>Verificação de Nacionalidade</h1>
+    <label for="nac">Digite seu País</label>
+    <input type="text" name="nac" id="nac">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <input type="reset" value="Limpar" onclick="limpar()">
+    <div id="res"></div>
+    <p>Você está no Brasil!</p>
+
+
+
+
+
+</body>
+
+</html>
+
+
+<script>
+    var nac = document.querySelector('input#nac')
+    var res = document.querySelector('div#res')
+
+    function verificar() {
+        var nacionalidade = nac.value.toLowerCase()
+        if (nacionalidade == 'brasil' || nacionalidade == 'brazil') {
+            res.innerHTML += '<p>Você é <strong>Brasileiro</strong></p>'
+        } else {
+            res.innerHTML += '<p>Você é <strong>Estrangeiro</strong>.</p>'
+        }
+
+    }
+    function limpar() {
+        res.innerHTML = ''
+        }
+
+</script>
